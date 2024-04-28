@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Viewport" content="width=device-width,initial-scale=1.0">
+    <title>Menu Bar Example</title>
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            margin:0;
+            align-items:center;
+            Background-color: skyblue;
+        }
+        .navbar{
+            background-color:#333;
+            overflow:hidden;
+        }
+        .navbar a {
+            float:right;
+            display:block;
+            color:deeppink;
+            text-align:center;
+            padding:14px 20px;
+            text-decoration:none;
+        }
+        .navbar a:hover{
+            background-color:hotpink;
+            color:forestgreen;
+        }
+        form{
+            background-color:orange;
+            padding:20px;
+            border-radius:5px;
+            box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
+            width:300px;
+            display: block;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"],
+        input[type="submit"]{
+            width:100%;
+            padding:10px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            box-sizing:border-box;
+        }
+        input[type="submit"]{
+            background-color:red;
+            color:yellow;
+            border:none;
+            cursor:pointer;
+        }
+        input[type="submit"]:hover{
+            background-color:#45a049;
+        }
+        </style>
+</head>
+<body>
+<div class="navbar">
+    <a href="home.html">contact</a>
+    <a href="logininput">login</a>
+    <a href="registerinput">register</a>
+    <a href="#about">home</a>
+</div>
+    <form action="./login" method="post">
+        {% csrf_token %}
+        <h2>Login Form</h2>
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="login">
+    </form>
+</body>
+</html>
